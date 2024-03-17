@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Position on Hover</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #imageContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.hovered {
+    transform: translate(50px, 50px); /* Change position here */
+}
+
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <img id="hoverImage" src="1.jpg" alt="Hover Image">
+    </div>
+    <script>
+        const hoverImage = document.getElementById("hoverImage");
+
+hoverImage.addEventListener("mouseover", function() {
+    this.classList.add("hovered");
+});
+
+hoverImage.addEventListener("mouseout", function() {
+    this.classList.remove("hovered");
+});
+
+    </script>
+
+</body>
+</html>

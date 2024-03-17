@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Navigation Bars</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for the top navigation bar */
+#topNav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#topNav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#topNav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles for the side navigation bar */
+.sideNav {
+    background-color: #f4f4f4;
+    color: #333;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.sideNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sideNav ul li {
+    padding: 10px;
+}
+
+.sideNav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Main content area */
+.content {
+    margin-left: 150px; /* Adjust to match side navigation width */
+    padding: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav id="topNav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <br>
+    <nav class="sideNav">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Main content goes here -->
+    </div>
+</body>
+</html>

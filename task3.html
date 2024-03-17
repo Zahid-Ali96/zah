@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image with Border and Text</title>
+<style>
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-container .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .image-container:hover .text-overlay {
+    opacity: 1;
+  }
+
+  .small-border {
+    border: 3px solid black;
+  }
+
+  
+</style>
+</head>
+<body>
+
+<div class="image-container small-border">
+  <img src="zahid.jpg" alt="Your Image" width="300" height="300">
+  <div class="text-overlay">I am an image on a webpage</div>
+</div>
+
+</body>
+</html>
