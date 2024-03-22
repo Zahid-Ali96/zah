@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide and Show</title>
+  <style>
+    #paragraph {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="pa">This is a paragraph line.</p>
+  <button id="box">Hide</button>
+  <button id="box2">Show</button>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $('#box').click(function(){
+          $('#pa').hide();
+     });
+  });
+  $(document).ready(function(){
+      $('#box2').click(function(){
+          $('#pa').show();
+     });
+  });
+  </script>
+
+</body>
+</html>

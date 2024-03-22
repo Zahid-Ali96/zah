@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Message</title>
+</head>
+<body>
+  <button id="alertButton">Click Me!</button>
+
+  <script>
+    // Function to display an alert message
+    function showAlert() {
+      alert("Button clicked! This is an alert message.");
+    }
+
+    // Get reference to the button element
+    var alertButton = document.getElementById("alertButton");
+
+    // Add event listener to the button to trigger the showAlert function when clicked
+    alertButton.addEventListener("click", showAlert);
+  </script>
+</body>
+</html>

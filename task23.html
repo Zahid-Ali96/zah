@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Calculator</title>
+  <style>
+    .calculator {
+      display: grid;
+      grid-template-columns: repeat(4, 3fr);
+      grid-gap: 5px;
+    }
+    .calculator button {
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .ab{
+        text-align: center;
+    }
+    .a{
+        width: 600px;
+        height: 70px;
+        text-align: right;
+        t
+
+    }
+  </style>
+</head>
+<body>
+  <h2>Simple Calculator</h2>
+  <div class="ab">
+    <input class="a" type="text" id="result" disabled>
+  </div>
+  <div class="calculator">
+    
+    <button onclick="appendToResult('1')">1</button>
+    <button onclick="appendToResult('2')">2</button>
+    <button onclick="appendToResult('3')">3</button>
+    <button onclick="appendToResult('+')">+</button>
+    <button onclick="appendToResult('4')">4</button>
+    <button onclick="appendToResult('5')">5</button>
+    <button onclick="appendToResult('6')">6</button>
+    <button onclick="appendToResult('-')">-</button>
+    <button onclick="appendToResult('7')">7</button>
+    <button onclick="appendToResult('8')">8</button>
+    <button onclick="appendToResult('9')">9</button>
+    <button onclick="appendToResult('*')">*</button>
+    <button onclick="clearResult()">C</button>
+    <button onclick="appendToResult('0')">0</button>
+    <button onclick="appendToResult('00')">00</button>
+    <button onclick="calculate()">=</button>
+  </div>
+
+  <script>
+    var result = document.getElementById('result');
+
+    function appendToResult(value) {
+      result.value += value;
+    }
+
+    function clearResult() {
+      result.value = '';
+    }
+
+    function calculate() {
+      var expression = result.value;
+      var answer = eval(expression); // Note: Using eval is not recommended in production due to security risks
+      result.value = answer;
+    }
+  </script>
+</body>
+</html>

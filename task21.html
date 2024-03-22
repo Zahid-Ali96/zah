@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Month Names</title>
+</head>
+<body>
+  <div id="monthsList"></div>
+
+  <script>
+    // Define an array of month names
+    var months = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    // Function to generate HTML for month names
+    function generateMonthHTML() {
+      var html = "<ul>";
+      for (var i = 0; i < months.length; i++) {
+        html += "<li>" + months[i] + "</li>";
+      }
+      html += "</ul>";
+      return html;
+    }
+
+    // Get the reference to the div where months will be displayed
+    var monthsListDiv = document.getElementById("monthsList");
+
+    // Call the function to generate HTML and display month names
+    monthsListDiv.innerHTML = generateMonthHTML();
+  </script>
+</body>
+</html>
